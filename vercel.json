@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/health",
+      "dest": "/api/health.js"
+    },
+    {
+      "src": "/api/auth/login",
+      "dest": "/api/auth/login.js"
+    },
+    {
+      "src": "/api/auth/me",
+      "dest": "/api/auth/me.js"
+    },
+    {
+      "src": "/api/ph/employees",
+      "dest": "/api/ph/employees/index.js"
+    },
+    {
+      "src": "/api/ph/employees/(.*)",
+      "dest": "/api/ph/employees/[id].js"
+    },
+    {
+      "src": "/api/ph/attendance",
+      "dest": "/api/ph/attendance/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/$1"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 30
+    }
+  }
+}
