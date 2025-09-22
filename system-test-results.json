@@ -1,0 +1,65 @@
+{
+  "total_tests": 8,
+  "passed_tests": 8,
+  "failed_tests": 0,
+  "duration": 0.102,
+  "success_rate": "100.00%",
+  "results": [
+    {
+      "feature": "Employee",
+      "test": "Create EMP001",
+      "status": "passed",
+      "details": null,
+      "timestamp": "2025-09-17T09:30:24.168Z"
+    },
+    {
+      "feature": "Employee",
+      "test": "Verify EMP001",
+      "status": "passed",
+      "details": null,
+      "timestamp": "2025-09-17T09:30:24.169Z"
+    },
+    {
+      "feature": "Employee",
+      "test": "Create EMP002",
+      "status": "passed",
+      "details": null,
+      "timestamp": "2025-09-17T09:30:24.177Z"
+    },
+    {
+      "feature": "Employee",
+      "test": "Verify EMP002",
+      "status": "passed",
+      "details": null,
+      "timestamp": "2025-09-17T09:30:24.178Z"
+    },
+    {
+      "feature": "Employee",
+      "test": "Update salary",
+      "status": "passed",
+      "details": null,
+      "timestamp": "2025-09-17T09:30:24.185Z"
+    },
+    {
+      "feature": "Payroll",
+      "test": "Calculate",
+      "status": "passed",
+      "details": null,
+      "timestamp": "2025-09-17T09:30:24.192Z"
+    },
+    {
+      "feature": "Payroll",
+      "test": "Save",
+      "status": "passed",
+      "details": null,
+      "timestamp": "2025-09-17T09:30:24.192Z"
+    },
+    {
+      "feature": "Leave",
+      "test": "Initialize balances",
+      "status": "passed",
+      "details": null,
+      "timestamp": "2025-09-17T09:30:24.246Z"
+    }
+  ]
+}

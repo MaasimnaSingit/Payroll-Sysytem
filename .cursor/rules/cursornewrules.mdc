@@ -1,0 +1,51 @@
+---
+alwaysApply: true
+---
+---
+description:
+  You are a world-class full-stack developer specializing in Electron, React, Vite, SQLite, and Tailwind CSS.
+  Write clean, modular React with hooks and utility-first CSS to deliver a premium **dim** theme UI.
+  Do NOT modify backend routes, DB, pay math, auth, or APIs unless explicitly asked.
+
+# --------------------------------------------------------------------
+# Project Guardrails (Automated Payroll & Attendance)
+# --------------------------------------------------------------------
+
+## Scope
+- FRONTEND-ONLY unless explicitly asked. Do NOT change backend routes, DB code, pay math, auth, or APIs.
+- No large refactors or file renames. Keep component names/exports and routes the same.
+- Preserve all handlers/effects; avoid logic rewrites.
+
+## UI Conventions
+- Default theme: **Dim** (dark blue/gray surfaces). Use CSS variables in :root (src/index.css).
+- Canonical classes the codebase uses:
+  .card, .kpi, .kpi-value, .kpi-label, .input, .btn, .btn-primary, .btn-ghost, .topbar-grad, .sidebar-glass
+- Attendance layout = 2-column grid: **left ≈420px form**, **right = 1fr table**. Stack under **1100px**.
+
+## Required CSS anchors (must exist / remain)
+```css
+/* Attendance grid layout */
+.attn-grid{ display:grid; grid-template-columns:420px 1fr; gap:24px; align-items:start; }
+@media (max-width:1100px){ .attn-grid{ grid-template-columns:1fr; } }
+
+/* Popover layering (date/time/select) */
+.react-datepicker-popper,
+.react-select__menu,
+.flatpickr-calendar,
+[data-floating-ui-portal] { z-index:60 !important; }
+
+/* Dim theme tokens (surface/border/text) – keep these names stable */
+:root{
+  --bg: #0b1220; --panel:#101827; --panel-2:#0f172a;
+  --text:#e5e7eb; --muted:#9aa4b2; --border: rgba(255,255,255,0.06);
+}
+
+
+
+
+globs:
+alwaysApply: true
+---
+
+
+

@@ -1,0 +1,138 @@
+{
+  "total": 26,
+  "passed": 26,
+  "failed": 0,
+  "duration": 0.265,
+  "results": [
+    {
+      "message": "Create employee with PH fields",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.512Z"
+    },
+    {
+      "message": "Validate government IDs",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.514Z"
+    },
+    {
+      "message": "Update employee data",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.515Z"
+    },
+    {
+      "message": "Delete employee",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.515Z"
+    },
+    {
+      "message": "Clock in with photo",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.520Z"
+    },
+    {
+      "message": "Clock out with photo",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.520Z"
+    },
+    {
+      "message": "Calculate regular hours",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.522Z"
+    },
+    {
+      "message": "Calculate overtime (125%)",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.522Z"
+    },
+    {
+      "message": "Calculate night differential (10%)",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.523Z"
+    },
+    {
+      "message": "Handle holiday pay (200%)",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.523Z"
+    },
+    {
+      "message": "Handle rest day pay (130%)",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.524Z"
+    },
+    {
+      "message": "Calculate SSS (2024 table)",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.526Z"
+    },
+    {
+      "message": "Calculate PhilHealth (4.5%)",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.527Z"
+    },
+    {
+      "message": "Calculate Pag-IBIG (₱100)",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.528Z"
+    },
+    {
+      "message": "Calculate BIR tax",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.530Z"
+    },
+    {
+      "message": "Generate payslip",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.531Z"
+    },
+    {
+      "message": "Export payroll report",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.532Z"
+    },
+    {
+      "message": "Submit leave request",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.539Z"
+    },
+    {
+      "message": "Upload leave documentation",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.540Z"
+    },
+    {
+      "message": "Approve leave request",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.540Z"
+    },
+    {
+      "message": "Track leave balance",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.540Z"
+    },
+    {
+      "message": "Test all PH leave types",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.541Z"
+    },
+    {
+      "message": "Mobile photo capture",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.758Z"
+    },
+    {
+      "message": "Photo compression",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.758Z"
+    },
+    {
+      "message": "Responsive design",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.759Z"
+    },
+    {
+      "message": "Touch interactions",
+      "type": "info",
+      "timestamp": "2025-09-19T10:39:25.759Z"
+    }
+  ]
+}

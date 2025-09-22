@@ -8,7 +8,7 @@ A modern, secure, and fully-featured payroll and attendance management system bu
 - **Admin Dashboard**: Complete employee and payroll management
 - **Employee Portal**: Time clock, attendance tracking, and request management
 - **Real-time Data**: Live synchronization between admin and employee interfaces
-- **Web Base System**: Server through Vultr and subdomain from existing domain of user client
+- **Offline First**: Fully standalone Windows application with local SQLite database
 - **Modern UI**: Premium dark theme with Tailwind CSS
 - **Responsive Design**: Works seamlessly on all screen sizes
 

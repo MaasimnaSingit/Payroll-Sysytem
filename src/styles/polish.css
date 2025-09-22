@@ -1,0 +1,205 @@
+/* Final UI/UX Polish */
+
+/* Base Styles */
+:root {
+    /* Colors */
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --success: #059669;
+    --danger: #dc2626;
+    --warning: #d97706;
+    --info: #0891b2;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    
+    /* Transitions */
+    --transition: all 0.2s ease-in-out;
+    --transition-slow: all 0.3s ease-in-out;
+    --transition-fast: all 0.1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Premium UI Elements */
+.premium-card {
+    @apply bg-panel rounded-xl shadow-sm overflow-hidden;
+    animation: scaleIn 0.3s ease-out;
+    transition: var(--transition);
+}
+
+.premium-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.premium-form {
+    @apply space-y-6;
+    animation: slideIn 0.3s ease-out;
+}
+
+.premium-button {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+    background: linear-gradient(to right, var(--primary), var(--primary-hover));
+}
+
+.premium-button:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.premium-button:active {
+    transform: translateY(0);
+}
+
+/* Loading States */
+.loading-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.loading-spinner {
+    @apply animate-spin h-10 w-10 text-white;
+}
+
+/* Form Elements */
+.form-input,
+.form-select,
+.form-textarea {
+    @apply w-full rounded-lg border border-border bg-panel-2 px-4 py-2 transition-all duration-200;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    @apply border-primary ring-1 ring-primary ring-opacity-50;
+}
+
+.form-label {
+    @apply block text-sm font-medium mb-1;
+}
+
+/* Table Styles */
+.premium-table {
+    @apply w-full;
+}
+
+.premium-table th {
+    @apply text-left p-4 font-medium text-muted;
+}
+
+.premium-table td {
+    @apply p-4 border-t border-border;
+}
+
+.premium-table tr:hover {
+    @apply bg-panel-2;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+    .premium-card {
+        @apply rounded-none shadow-none;
+    }
+
+    .premium-form {
+        @apply space-y-4;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+        @apply text-base py-3;
+    }
+
+    .premium-button {
+        @apply w-full justify-center;
+    }
+
+    .premium-table {
+        @apply block overflow-x-auto whitespace-nowrap;
+    }
+
+    .premium-table td,
+    .premium-table th {
+        @apply py-3 px-4;
+    }
+}
+
+/* Touch Interactions */
+@media (hover: none) {
+    .premium-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .premium-button {
+        @apply active:bg-primary-hover;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+        @apply outline-none;
+    }
+}
+
+/* Notifications */
+.notification {
+    @apply fixed bottom-4 right-4 p-4 rounded-lg shadow-lg z-50;
+    animation: slideIn 0.3s ease-out;
+}
+
+.notification-success {
+    @apply bg-success text-white;
+}
+
+.notification-error {
+    @apply bg-danger text-white;
+}
+
+.notification-warning {
+    @apply bg-warning text-white;
+}
+
+.notification-info {
+    @apply bg-info text-white;
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    .premium-card {
+        box-shadow: none !important;
+        border: 1px solid #eee;
+    }
+
+    .premium-table th {
+        background-color: #f9f9f9 !important;
+        color: #333 !important;
+    }
+
+    .premium-table td {
+        border-color: #eee !important;
+    }
+}

@@ -1,0 +1,3 @@
+# This is a placeholder for the icon.png file
+# In a real project, you would place an actual PNG icon file here
+# For now, this prevents the file not found error in main.js 
