@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { employeeValidation, formatFieldValue } from '../../services/validation';
+import { employeeValidation, formatFieldValue } from '/src/services/validation.js';
 
 export default function FormField({
     label,
