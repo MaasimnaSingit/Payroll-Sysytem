@@ -13,8 +13,8 @@ router.get('/', authRequired, requireRole('admin'), (req, res) => {
     let query = `
       SELECT 
         a.*,
-        e.employee_code, e.first_name, e.last_name, e.full_name,
-        e.employment_type, e.basic_salary, e.daily_rate, e.hourly_rate, e.overtime_rate
+        e.employee_code, e.first_name, e.last_name, e.middle_name,
+        e.employment_type, e.base_salary, e.daily_rate, e.hourly_rate
       FROM attendance a
       JOIN employees e ON a.employee_id = e.id
       WHERE 1=1

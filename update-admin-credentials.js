@@ -12,8 +12,8 @@ const db = new sqlite3(DB_PATH);
 const hashedPassword = bcrypt.hashSync('Tgpspayroll16**', 10);
 
 // Update admin credentials
-const stmt = db.prepare('UPDATE users SET username = ?, password = ? WHERE role = ?');
-const result = stmt.run('Tgpspayroll', hashedPassword, 'admin');
+const stmt = db.prepare('UPDATE users SET password = ? WHERE username = ?');
+const result = stmt.run(hashedPassword, 'Tgpspayroll');
 
 console.log('Admin credentials updated successfully');
 console.log('Username: Tgpspayroll');
