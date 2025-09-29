@@ -11,7 +11,7 @@ function authRequired(req,res,next){
 }
 function requireRole(...roles){
   return (req,res,next)=> !req.user ? res.status(401).json({error:'Unauthorized'})
-    : roles.includes(req.user.role) ? next() : res.status(403).json({error:'Forbidden'});
+    : roles.includes(req.user.role) || (req.user.role === 'admin' && roles.includes('ADMIN_HR')) ? next() : res.status(403).json({error:'Forbidden'});
 }
 function signJwt(u){
   return jwt.sign({
